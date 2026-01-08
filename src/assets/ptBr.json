@@ -1,0 +1,541 @@
+{
+  "templateConfig": {
+    "name": "default",
+    "monochrome": true,
+    "language": "ptBr",
+    "fontColor": "#706f6f",
+    "fontSize": 1
+  },
+  "headerSection": {
+    "header": {
+      "name": "Mauro Domingues"
+    },
+    "contact": {
+      "whatsapp": {
+        "value": "5535991248514"
+      },
+      "github": {
+        "value": "github.com/Mauro-Domingues",
+        "ref": "https://github.com/Mauro-Domingues"
+      },
+      "email": {
+        "value": "mauro-domingues@outlook.com"
+      },
+      "address": {
+        "value": "Pouso Alegre - Minas Gerais"
+      },
+      "linkedin": {
+        "value": "in/mauro-domingues",
+        "ref": "https://www.linkedin.com/in/mauro-domingues"
+      }
+    }
+  },
+  "targetSection": {
+    "position": "Engenheiro de Desenvolvimento de Software",
+    "keywords": [
+      "desenvolvedor",
+      "backend",
+      "back-end",
+      "back end",
+      "node js",
+      "node.js",
+      "nodejs"
+    ]
+  },
+  "aboutSection": {
+    "descriptions": [
+      "Desenvolvedor web especializado em back-end, apaixonado por criar soluções escaláveis e eficientes. Com mais de 2 anos de experiência na construção de APIs robustas em Node.js e TypeScript, utilizando frameworks como Express e ORMs como TypeORM. Expertise em bancos de dados relacionais e não relacionais, além de habilidades em containerização com Docker e gerenciamento de servidores web com Nginx, otimizando a performance e a escalabilidade das aplicações.",
+      "Conhecimento em front-end com React, Next.js e Angular, permitindo colaboração efetiva em equipes multidisciplinares.",
+      "Participei ativamente em dezenas de projetos, desde a manutenção de sistemas legados até o desenvolvimento completo de novas aplicações.",
+      "Como líder, gerenciei e mentorei novos desenvolvedores, promovendo boas práticas e contribuindo para o crescimento da equipe.",
+      "Aprendizado rápido e atenção meticulosa aos detalhes são pontos fortes que asseguram qualidade em cada projeto. Inglês intermediário/avançado, capacitado para comunicação em ambientes multiculturais."
+    ],
+    "keywords": [
+      "backend",
+      "back-end",
+      "back end",
+      "frontend",
+      "front-end",
+      "front end",
+      "design patterns",
+      "padroes de design",
+      "node js",
+      "node.js",
+      "nodejs",
+      "typescript",
+      "express",
+      "typeorm",
+      "SQL",
+      "noSQL",
+      "infra",
+      "react",
+      "next",
+      "angular"
+    ]
+  },
+  "projectSection": {
+    "projects": [
+      {
+        "title": "Cross Api",
+        "keywords": [
+          "typeScript",
+          "node.js",
+          "CLI (command line interface)",
+          "SOLID principles",
+          "APIs RESTful",
+          "automação de código",
+          "testes unitários",
+          "geração de documentação",
+          "open source",
+          "produtividade em desenvolvimento"
+        ],
+        "description": "Desenvolvi a Cross Api, uma ferramenta de linha de comando (CLI) de código aberto que automatiza a geração de estruturas de APIs robustas e limpas em TypeScript, alinhadas aos princípios SOLID. A Cross Api facilita a criação de operações CRUD, provedores, testes unitários e documentação integrada, amplificando exponencialmente a produtividade das equipes de desenvolvimento. Ao oferecer tipagem estática e arquitetura bem definida, ela minimiza erros e acelera o tempo de desenvolvimento. Este projeto autoral está disponível no GitHub e contribui para a comunidade de desenvolvedores ao simplificar a construção de APIs.",
+        "link": {
+          "ref": "https://github.com/Mauro-Domingues/cross-api",
+          "value": "github.com/Mauro-Domingues/cross-api"
+        }
+      },
+      {
+        "title": "Cross Proxy",
+        "keywords": [
+          "nestJS",
+          "microservices",
+          "Mensageria",
+          "comunicação síncrona e assíncrona",
+          "arquitetura de microserviços",
+          "abstração de serviços",
+          "intercambialidade de brokers",
+          "open source"
+        ],
+        "description": "Criei o Cross Proxy, uma camada de abstração central que integra múltiplos sistemas de mensageria, como Kafka e RabbitMQ, facilitando a comunicação síncrona e assíncrona entre serviços. Baseado no módulo @nestjs/microservices, o Cross Proxy permite a intercambialidade de brokers de mensagens sem a necessidade de alterar a lógica de negócio, promovendo flexibilidade e escalabilidade na arquitetura de microserviços. Este projeto autoral visa simplificar a complexidade das integrações e está disponível como código aberto para a comunidade.",
+        "link": {
+          "ref": "https://github.com/Mauro-Domingues/cross-proxy",
+          "value": "github.com/Mauro-Domingues/cross-proxy"
+        }
+      },
+      {
+        "title": "Cross Kafka",
+        "keywords": [
+          "kafka",
+          "kafkaJS",
+          "nestJS",
+          "microservices",
+          "mensageria assíncrona",
+          "cross proxy",
+          "sistemas distribuídos",
+          "comunicação inter-serviços",
+          "abstração de kafka",
+          "open source"
+        ],
+        "description": "Desenvolvi o Cross Kafka, um núcleo isolado para implementação do KafkaJS baseado no módulo @nestjs/microservices, construído sobre o Cross Proxy. Esta solução permite a utilização simplificada do Kafka como sistema de mensageria, facilitando a implementação de comunicação assíncrona em aplicações Node.js. O Cross Kafka abstrai a complexidade do Kafka, oferecendo uma interface amigável e consistente para desenvolvedores, promovendo eficiência e rapidez no desenvolvimento de sistemas distribuídos.",
+        "link": {
+          "ref": "https://github.com/Mauro-Domingues/cross-kafka",
+          "value": "github.com/Mauro-Domingues/cross-kafka"
+        }
+      },
+      {
+        "title": "Plataforma Cubick",
+        "keywords": [
+          "e-commerce",
+          "microserviços",
+          "multitenancy (multilocação)",
+          "integração com ERPs",
+          "gateway de pagamentos",
+          "cloud storage",
+          "APIs RESTful",
+          "arquitetura escalável",
+          "liderança de projeto",
+          "rise studio"
+        ],
+        "description": "Desenvolvi a Plataforma Cubick, um sistema de e-commerce white label baseado em arquitetura de microserviços e multilocação, permitindo a múltiplos clientes operarem lojas personalizadas em uma única infraestrutura. A plataforma integra funcionalidades essenciais, como envio de emails, armazenamento de arquivos em nuvem, cotações de frete em tempo real, gateways de pagamento e sincronização com diferentes ERPs. Meu papel envolveu desde o levantamento de requisitos até a implementação completa do sistema, assegurando escalabilidade, segurança e eficiência. Este projeto é propriedade da Rise Studio e tem contribuído para expandir o alcance digital de diversos negócios."
+      },
+      {
+        "title": "Aplicativo Ishow",
+        "keywords": [
+          "aplicativo mobile",
+          "node.js",
+          "webSocket",
+          "notificações push",
+          "gateway de pagamentos",
+          "cloud storage",
+          "chat em tempo real",
+          "agendamento de eventos",
+          "desenvolvimento full stack",
+          "rise studio"
+        ],
+        "description": "Desenvolvi o Aplicativo Ishow, uma plataforma móvel que conecta bandas e artistas a estabelecimentos, facilitando o agendamento de eventos e shows. A aplicação oferece funcionalidades como chat em tempo real via WebSocket, envio de notificações push, gerenciamento de agendas e integração com gateways de pagamento para transações seguras. Além disso, inclui armazenamento de arquivos em nuvem para compartilhamento de mídias e envio de emails automatizados. Minha responsabilidade abrangeu desde a coleta de requisitos até o desenvolvimento completo do sistema. Este projeto, propriedade da Rise Studio, tem revolucionado a forma como artistas e estabelecimentos negociam e organizam eventos."
+      },
+      {
+        "title": "Simulador Solar Aureos",
+        "keywords": [
+          "energia solar",
+          "cálculos de investimento",
+          "multitenancy (multilocação)",
+          "integração com ANEEL e LABREN",
+          "sustentabilidade",
+          "gateway de pagamentos",
+          "automação de emails",
+          "node.js",
+          "arquitetura escalável",
+          "rise studio"
+        ],
+        "description": "Criei o Simulador Solar Aureos, um sistema multilocatário que calcula o investimento em energia solar fotovoltaica para usuários, considerando o endereço e o consumo elétrico mensal. A plataforma determina a quantidade ideal de painéis solares, área necessária, custo total, tempo de retorno do investimento e estimativa de impacto ambiental positivo. Integrado com bases de dados da ANEEL e LABREN, o sistema oferece estimativas precisas e personalizadas. Também inclui envio de emails automatizados e integração com gateways de pagamento para facilitação de transações. Fui responsável por todo o ciclo de desenvolvimento, desde a definição dos requisitos até a implementação. Este projeto é uma propriedade da Rise Studio e contribui para a promoção da energia sustentável."
+      },
+      {
+        "title": "Zafety",
+        "keywords": [
+          "segurança do trabalho",
+          "refatoração de código",
+          "metodologias de resolução de problemas",
+          "5 porquês",
+          "diagrama de ishikawa",
+          "aplicação web e mobile",
+          "gestão de riscos",
+          "manutenção de sistemas",
+          "zafety",
+          "melhores práticas de código"
+        ],
+        "description": "Atuei na refatoração e manutenção da Zafety, uma plataforma web e móvel voltada para a gestão da segurança ocupacional. O sistema abrange funcionalidades como inspeções de ambiente, controle de equipamentos, gestão de funcionários, registro de atas de reuniões e simulações de emergência. Implementa metodologias de resolução de problemas como os 5 Porquês e Diagrama de Ishikawa, facilitando a identificação de causas raiz de incidentes. Minha contribuição assegurou a estabilidade e eficiência do sistema até sua entrega final. Este projeto é propriedade da Zafety e fortalece as práticas de segurança nas organizações."
+      },
+      {
+        "title": "União Softwares",
+        "keywords": [
+          "gerenciamento de contratos",
+          "manutenção de software",
+          "node.js",
+          "aperfeiçoamento de sistema",
+          "gestão documental",
+          "otimização de processos",
+          "união softwares",
+          "back-end development",
+          "user experience",
+          "entrega de projetos"
+        ],
+        "description": "Contribuí para a União Softwares realizando a manutenção e aperfeiçoamento de sua plataforma de gerenciamento de contratos. A solução permite o controle centralizado de documentos, prazos, cláusulas e notificações, otimizando os processos legais e administrativos das empresas. Minha atuação garantiu a estabilidade do sistema e a entrega bem-sucedida do projeto, melhorando a experiência do usuário e a eficiência operacional. Este projeto é propriedade da União Softwares."
+      },
+      {
+        "title": "Easy Ingressos",
+        "keywords": [
+          "venda de ingressos",
+          "eventos",
+          "aplicação web e mobile",
+          "QR code",
+          "modo offline",
+          "gateway de pagamentos",
+          "validação de ingressos",
+          "manutenção de software",
+          "easy ingressos",
+          "relatórios e analytics"
+        ],
+        "description": "Atuei na manutenção do Easy Ingressos, uma plataforma web e móvel para divulgação de eventos e venda de ingressos. O sistema inclui funcionalidades como validação de ingressos na portaria através de QR Codes, pontos de venda físicos, operação em modo offline e geração de relatórios detalhados para organizadores. Integra recursos como envio de emails, armazenamento em nuvem e integração com gateways de pagamento para transações seguras. Minha contribuição foi essencial para a estabilidade e otimização do sistema até sua entrega final. Este projeto é propriedade da Easy Ingressos e tem facilitado a gestão de eventos e a experiência dos participantes."
+      },
+      {
+        "title": "Portal 4G - Plano de Governo",
+        "keywords": [
+          "serviços públicos",
+          "plano de governo",
+          "emissão de notas fiscais",
+          "integração fiscal",
+          "gateway de pagamentos",
+          "automação de processos",
+          "node.js",
+          "4G",
+          "compliance",
+          "sistemas eleitorais"
+        ],
+        "description": "Desenvolvi integrações para o Portal 4G - Plano de Governo, uma plataforma que auxilia candidatos a cargos públicos na elaboração e emissão de seus planos de governo em formato PDF de maneira simplificada. Implementei a integração com o sistema de emissão de notas fiscais da Prefeitura de Belo Horizonte, automatizando processos financeiros e garantindo compliance fiscal. Além disso, a plataforma é integrada com gateways de pagamento, facilitando transações seguras. Minha contribuição otimizou o fluxo operacional do sistema, propriedade da 4G, contribuindo para a eficiência dos processos eleitorais."
+      },
+      {
+        "title": "Uai Passei",
+        "keywords": [
+          "educação online",
+          "e-learning",
+          "videoaulas",
+          "simulados",
+          "notificações push",
+          "gateway de pagamentos",
+          "desenvolvimento full stack",
+          "engajamento de alunos",
+          "uai passei",
+          "plataformas educacionais"
+        ],
+        "description": "Desenvolvi a plataforma Uai Passei, focada em cursos preparatórios para exames e concursos. O sistema permite que os alunos acessem conteúdos educacionais, acompanhem videoaulas, realizem simulados e monitorem seu progresso. Integrado com notificações push e envio de emails para manter os alunos engajados, também oferece transações seguras através de gateways de pagamento. Minha responsabilidade incluiu o levantamento de requisitos e o desenvolvimento completo da plataforma, proporcionando uma experiência educacional intuitiva e eficiente. Este projeto é propriedade da Uai Passei e tem contribuído para o sucesso de muitos estudantes."
+      },
+      {
+        "title": "Stone House",
+        "keywords": [
+          "plataforma imobiliária",
+          "sistema de matches",
+          "personalização de preferências",
+          "notificações por e-mail",
+          "desenvolvimento full stack",
+          "node.js",
+          "typeScript",
+          "APIs RESTful",
+          "banco de dados",
+          "levantamento de requisitos",
+          "experiência do usuário (UX)",
+          "automação de processos",
+          "propriedade da stone house"
+        ],
+        "description": "Desenvolvi a Stone House, uma plataforma imobiliária online inovadora com um diferencial: um sistema inteligente de matches. Os usuários definem suas preferências de imóveis, e o sistema identifica propriedades que atendem a pelo menos 70% dos requisitos, enviando notificações por e-mail sobre novas correspondências. Fui responsável por todo o projeto, desde o levantamento de requisitos até a entrega final. Este projeto é de propriedade da Stone House garantindo uma experiência fluida e personalizada para compradores e vendedores"
+      }
+    ]
+  },
+  "skillSection": {
+    "keywords": [
+      "node.js",
+      "typeScript",
+      "express.js",
+      "adonisJS",
+      "typeORM",
+      "sequelize",
+      "lucid ORM",
+      "mongoose",
+      "mySQL",
+      "postgreSQL",
+      "mongoDB",
+      "redis",
+      "docker",
+      "git",
+      "termius",
+      "react",
+      "next.js",
+      "angular",
+      "serviços AWS",
+      "APIs RESTful",
+      "bancos de dados relacionais",
+      "bancos de dados não relacionais",
+      "desenvolvimento back-end",
+      "desenvolvimento full stack",
+      "programação web",
+      "controle de versão",
+      "infraestrutura e servidores",
+      "containerização",
+      "colaboração em equipe",
+      "mentoria",
+      "resolução de problemas",
+      "aprendizado rápido",
+      "inglês intermediário-avançado"
+    ],
+    "skills": [
+      {
+        "title": "inglês",
+        "level": "average-advanced"
+      },
+      {
+        "title": "typescript",
+        "level": "specialized"
+      },
+      {
+        "title": "nodejs",
+        "level": "specialized"
+      },
+      {
+        "title": "express",
+        "level": "specialized"
+      },
+      {
+        "title": "adonis",
+        "level": "average"
+      },
+      {
+        "title": "typeorm",
+        "level": "specialized"
+      },
+      {
+        "title": "sequelize",
+        "level": "average"
+      },
+      {
+        "title": "lucid",
+        "level": "average"
+      },
+      {
+        "title": "mongoose",
+        "level": "average"
+      },
+      {
+        "title": "mysql",
+        "level": "advanced"
+      },
+      {
+        "title": "redis",
+        "level": "advanced"
+      },
+      {
+        "title": "mongodb",
+        "level": "average-advanced"
+      },
+      {
+        "title": "postgre",
+        "level": "average-advanced"
+      },
+      {
+        "title": "docker",
+        "level": "average-advanced"
+      },
+      {
+        "title": "git",
+        "level": "average-advanced"
+      },
+      {
+        "title": "termius",
+        "level": "average-advanced"
+      },
+      {
+        "title": "react",
+        "level": "average"
+      },
+      {
+        "title": "nextjs",
+        "level": "average"
+      },
+      {
+        "title": "angular",
+        "level": "average"
+      },
+      {
+        "title": "serviços AWS",
+        "level": "average"
+      }
+    ]
+  },
+  "graduationSection": {
+    "graduations": [
+      {
+        "title": "string",
+        "keywords": [
+          "string"
+        ],
+        "institution": "string",
+        "currently": false,
+        "period": "string",
+        "description": "string",
+        "startsAt": "2022-10-28T00:00:00.000Z",
+        "endsAt": "2025-10-28T00:00:00.000Z"
+      }
+    ]
+  },
+  "specializationSection": {
+    "specializations": [
+      {
+        "title": "Introdução ao Nodejs",
+        "keywords": [
+          "Nodejs",
+          "javaScript",
+          "back-end",
+          "APIs",
+          "desenvolvimento server-side",
+          "npm",
+          "event loop"
+        ],
+        "institution": "Microsoft",
+        "duration": "3",
+        "description": "Curso introdutório oferecido pela Microsoft que explora os fundamentos do Node.js, capacitando para o desenvolvimento de aplicações JavaScript no lado do servidor. Aborda a instalação, entendimento do event loop, módulos nativos, gerenciamento de pacotes com npm e criação de APIs básicas, estabelecendo uma base sólida para projetos back-end modernos."
+      },
+      {
+        "title": "Trilha Ignite Nodejs",
+        "keywords": [
+          "node.js avançado",
+          "APIs RESTful",
+          "typeORM",
+          "testes automatizados",
+          "autenticação",
+          "clean architecture",
+          "SOLID",
+          "desenvolvimento back-end"
+        ],
+        "institution": "Rocketseat",
+        "duration": "130",
+        "description": "Programa imersivo que aprofunda no desenvolvimento avançado com Node.js, incluindo a construção de APIs RESTful, gerenciamento de banco de dados com TypeORM, testes automatizados, autenticação e autorização, além de princípios de Clean Architecture e SOLID. Projetos práticos fortaleceram a aplicação de conceitos em cenários reais."
+      },
+      {
+        "title": "Soft Skills",
+        "keywords": [
+          "comunicação eficaz",
+          "liderança",
+          "inteligência emocional",
+          "trabalho em equipe",
+          "resolução de conflitos",
+          "adaptabilidade",
+          "competências comportamentais"
+        ],
+        "institution": "Startse",
+        "duration": "10",
+        "description": "Curso direcionado ao aprimoramento de competências comportamentais, como comunicação eficaz, liderança, inteligência emocional, trabalho em equipe, resolução de conflitos e adaptabilidade. Através de dinâmicas e estudos de caso, fortaleceu habilidades essenciais para colaboração e crescimento profissional."
+      },
+      {
+        "title": "Programação Web full stack",
+        "keywords": [
+          "full stack development",
+          "HTML5/CSS3",
+          "javaScript ES6+",
+          "node.js",
+          "express",
+          "bancos de dados",
+          "git"
+        ],
+        "institution": "Startse",
+        "duration": "100",
+        "description": "Formação completa em desenvolvimento Full Stack, cobrindo tecnologias front-end como HTML5, CSS3, JavaScript ES6+, e back-end com Node.js, Express e bancos de dados SQL. O curso enfatizou boas práticas, como versionamento com Git e integração de APIs, capacitando para criar aplicações web responsivas e escaláveis."
+      },
+      {
+        "title": "Inglês Básico/Intermediário",
+        "keywords": [
+          "inglês intermediário",
+          "conversação",
+          "compreensão de textos",
+          "gramática avançada",
+          "comunicação profissional",
+          "vocabulário técnico"
+        ],
+        "institution": "Evolute Cursos Profissionalizantes",
+        "duration": "192",
+        "description": "Curso extensivo de Inglês nos níveis básico ao intermediário, aprimorando habilidades de leitura, escrita, audição e conversação. O programa incluiu práticas de diálogo, compreensão de textos técnicos e aprimoramento gramatical, capacitando para comunicação eficaz em ambientes profissionais e acadêmicos."
+      },
+      {
+        "title": "Informática básico",
+        "keywords": [
+          "informática básica",
+          "hardware e software",
+          "linux",
+          "ferramentas de escritório",
+          "libreOffice",
+          "alfabetização digital",
+          "sistema operacional",
+          "competências tecnológicas"
+        ],
+        "institution": "Núcleo Tecnológico Municipal",
+        "duration": "40",
+        "description": "Curso introdutório que proporcionou competências fundamentais em informática, abordando conceitos essenciais de hardware e software. O treinamento incluiu o uso de ferramentas de escritório para criação e edição de documentos, planilhas e apresentações, utilizando o sistema operacional Linux como plataforma de ensino."
+      }
+    ]
+  },
+  "experienceSection": {
+    "experiences": [
+      {
+        "title": "Desenvolvedor de Software",
+        "keywords": [
+          "desenvolvimento back-end",
+          "node.js",
+          "typeScript",
+          "APIs RESTful",
+          "express.js",
+          "typeORM",
+          "bancos de dados relacionais e não relacionais",
+          "docker",
+          "nginx",
+          "colaboração em equipe",
+          "mentoria e liderança",
+          "otimização de performance",
+          "integração de sistemas"
+        ],
+        "company": "Rise Studio",
+        "description": "Desenvolvi soluções personalizadas para diversos clientes, colaborando com equipes multidisciplinares para garantir a excelência nos projetos. Além disso, orientei novos membros da equipe, promovendo um ambiente de crescimento contínuo e incentivando o desenvolvimento profissional dentro da empresa.",
+        "currently": true,
+        "startsAt": "2022-10-28T00:00:00.000Z"
+      }
+    ]
+  }
+}

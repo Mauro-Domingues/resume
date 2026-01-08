@@ -1,0 +1,197 @@
+{
+  "templateConfig": {
+    "name": "default",
+    "monochrome": true,
+    "language": "ptBr",
+    "fontColor": "#706f6f",
+    "fontSize": 1
+  },
+  "headerSection": {
+    "header": {
+      "name": "Seu nome"
+    },
+    "contact": {
+      "whatsapp": {
+        "value": "5535988887777"
+      },
+      "github": {
+        "value": "github.com/Mauro-Domingues",
+        "ref": "https://github.com/Mauro-Domingues"
+      },
+      "email": {
+        "value": "email@outlook.com"
+      },
+      "address": {
+        "value": "Pouso Alegre - Minas Gerais"
+      },
+      "linkedin": {
+        "value": "in/seu-perfil",
+        "ref": "https://www.linkedin.com/in/seu-perfil"
+      },
+      "personal": [
+        {
+          "value": "site-portifolio.com",
+          "ref": "https://portifolio.com"
+        },
+        {
+          "value": "site-portifolio2.com",
+          "ref": "https://portifolio2.com"
+        }
+      ]
+    }
+  },
+  "targetSection": {
+    "position": "Cargo",
+    "keywords": [
+      "palavra chave 1",
+      "palavra chave 2",
+      "palavra chave 3"
+    ]
+  },
+  "aboutSection": {
+    "descriptions": [
+      "Parágrafo 1",
+      "Parágrafo 2",
+      "Parágrafo 3"
+    ],
+    "keywords": [
+      "palavra chave 1",
+      "palavra chave 2",
+      "palavra chave 3"
+    ]
+  },
+  "projectSection": {
+    "projects": [
+      {
+        "title": "Projeto 1",
+        "keywords": [
+          "palavra chave 1",
+          "palavra chave 2",
+          "palavra chave 3"
+        ],
+        "description": "É mais útil para desenvolvedores, o campo link ali abaixo é opcional",
+        "link": {
+          "ref": "https://github.com/Mauro-Domingues/cross-api",
+          "value": "github.com/Mauro-Domingues/cross-api"
+        }
+      },
+      {
+        "title": "Projeto 2",
+        "keywords": [
+          "palavra chave 1",
+          "palavra chave 2",
+          "palavra chave 3"
+        ],
+        "description": "Descrição do projeto 2"
+      }
+    ]
+  },
+  "skillSection": {
+    "keywords": [
+      "palavra chave 1",
+      "palavra chave 2",
+      "palavra chave 3"
+    ],
+    "skills": [
+      {
+        "title": "habilidade basica",
+        "level": "basic"
+      },
+      {
+        "title": "habilidade iniciante",
+        "level": "basic-average"
+      },
+      {
+        "title": "habilidade intermediária",
+        "level": "average"
+      },
+      {
+        "title": "habilidade proficiente",
+        "level": "average-advanced"
+      },
+      {
+        "title": "habilidade avançada",
+        "level": "advanced"
+      },
+      {
+        "title": "habilidade expert",
+        "level": "advanced-specialized"
+      },
+      {
+        "title": "habilidade especializado",
+        "level": "specialized"
+      }
+    ]
+  },
+  "graduationSection": {
+    "graduations": [
+      {
+        "title": "faculdade x",
+        "keywords": [
+          "palavra chave 1",
+          "palavra chave 2",
+          "palavra chave 3"
+        ],
+        "institution": "univás",
+        "description": "descrição",
+        "endsAt": "2022-10-28T00:00:00.000Z",
+        "startsAt": "2022-10-28T00:00:00.000Z"
+      },
+      {
+        "title": "faculdade 2",
+        "keywords": [
+          "palavra chave 1",
+          "palavra chave 2",
+          "palavra chave 3"
+        ],
+        "institution": "univás 2",
+        "currently": true,
+        "description": "descrição",
+        "startsAt": "2022-10-28T00:00:00.000Z"
+      }
+    ]
+  },
+  "specializationSection": {
+    "specializations": [
+      {
+        "title": "Introdução ao Nodejs",
+        "keywords": [
+          "palavra chave 1",
+          "palavra chave 2",
+          "palavra chave 3"
+        ],
+        "institution": "Microsoft",
+        "duration": "3",
+        "description": "descrição do curso"
+      }
+    ]
+  },
+  "experienceSection": {
+    "experiences": [
+      {
+        "title": "cargo 1",
+        "keywords": [
+          "palavra chave 1",
+          "palavra chave 2",
+          "palavra chave 3"
+        ],
+        "company": "Rise Studio",
+        "description": "O campo currently quer dizer 'trabalhando até o momento'",
+        "currently": true,
+        "startsAt": "2022-10-28T00:00:00.000Z"
+      },
+      {
+        "title": "cargo 2",
+        "keywords": [
+          "palavra chave 1",
+          "palavra chave 2",
+          "palavra chave 3"
+        ],
+        "company": "Rise Studio",
+        "description": "descrição",
+        "endsAt": "2022-10-28T00:00:00.000Z",
+        "startsAt": "2022-10-28T00:00:00.000Z"
+      }
+    ]
+  }
+}
