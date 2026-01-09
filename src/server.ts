@@ -37,7 +37,7 @@ app.get('/', (_req, res) => {
 
 app.post('/api/render', (req, res) => {
   try {
-    const variables = req.body;
+    const variables = req.body
     convertDates(variables);
 
     const register = new RegisterTemplateService();

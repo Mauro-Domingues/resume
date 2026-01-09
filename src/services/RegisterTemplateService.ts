@@ -1,6 +1,5 @@
 import { IAssertNumberDTO } from '../dtos/IAssertNumberDTO';
 import { ISkillItemDTO } from '../dtos/ISkillItemDTO';
-import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { cwd } from 'node:process';
 import { IVariablesDTO } from '../dtos/IVariablesDTO';
@@ -167,8 +166,7 @@ export class RegisterTemplateService {
   }
 
   #getImageBase64(path: string): string {
-    const imageBase64 = readFileSync(path, 'base64');
-    return `data:image/svg+xml;base64,${imageBase64}`;
+    return path
   }
 
   #orderArrray(data: Array<IPeriodItemDTO>): void {

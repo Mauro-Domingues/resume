@@ -157,7 +157,12 @@
       } else if (f.type === 'checkbox') {
         html += `<label>${f.label} <input type="checkbox" class="${f.name}" ${data?.[f.name] ? 'checked' : ''}/></label>`;
       } else if (f.type === 'image') {
-        html += `<input type="file" class="${f.name}" accept="image/*" data-base64="" />`;
+        html += `
+          <div class="image-input-wrapper">
+            <input type="file" class="${f.name}" accept="image/*" data-base64="" />
+            <button type="button" class="${f.name}-remove">Clear Image</button>
+          </div>
+        `;
       } else if (f.type === 'link') {
         html += `<input class="${f.name}-value" placeholder="Display ${f.label}" value="${data?.[f.name]?.value ?? ''}" />`;
         html += `<input class="${f.name}-ref" placeholder="${f.label} URL" value="${data?.[f.name]?.ref ?? ''}" />`;
@@ -204,6 +209,8 @@
     // Handle image file inputs
     const imageInputs = div.querySelectorAll('input[type="file"]');
     imageInputs.forEach(input => {
+      const clearBtn = div.querySelector(`.${input.className}-remove`);
+
       input.addEventListener('change', (e) => {
         const file = e.target.files?.[0];
         if (file) {
@@ -214,6 +221,15 @@
           reader.readAsDataURL(file);
         }
       });
+
+      // Handle clear image button
+      if (clearBtn) {
+        clearBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          input.value = '';
+          input.dataset.base64 = '';
+        });
+      }
     });
 
     div.querySelector('.remove').addEventListener('click', () => div.remove());
@@ -264,6 +280,42 @@
       .map(input => input.value.trim())
       .filter(Boolean);
   }
+
+  // Helper to create description element
+  function createDescriptionElement(text = '') {
+    const div = document.createElement('div');
+    div.className = 'description-tag';
+    div.innerHTML = `
+      <textarea class="description-input" placeholder="Description">${text}</textarea>
+      <button type="button" class="description-remove">×</button>
+    `;
+    div.querySelector('.description-remove').addEventListener('click', () => div.remove());
+    return div;
+  }
+
+  // Helper to setup descriptions container
+  function setupDescriptionsContainer(containerId, addBtnId) {
+    const container = q(`#${containerId}`);
+    const addBtn = q(`#${addBtnId}`);
+
+    if (addBtn && container) {
+      addBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        container.appendChild(createDescriptionElement());
+      });
+    }
+  }
+
+  // Helper to get descriptions from container
+  function getDescriptionsFromContainer(containerId) {
+    const container = q(`#${containerId}`);
+    if (!container) return [];
+    return qa('.description-input', container)
+      .map(input => input.value.trim())
+      .filter(Boolean);
+  }
+
+  setupDescriptionsContainer('aboutDescriptions', 'aboutDescriptionsAdd');
 
   // skills
   const skillsList = q('#skillsList');
@@ -339,7 +391,7 @@
 
   function collect() {
     const templateConfig = {
-      name: 'default',
+      name: q('#templateModel')?.value ?? '',
       language: q('#templateLanguage')?.value ?? '',
       monochrome: q('#templateMonochrome')?.checked ?? false,
       fontColor: q('#templateFontColor')?.value ?? '#000000',
@@ -348,7 +400,7 @@
 
     const headerSection = {
       header: {
-        name: q('#headerName')?.value ?? '',
+        name: q('#headerName')?.value,
       },
       contact: {
         email: q('#headerEmail')?.value ? { value: q('#headerEmail').value } : undefined,
@@ -364,7 +416,7 @@
     };
 
     const aboutSection = {
-      descriptions: (q('#aboutDescriptions')?.value ?? '').split('\n').map(s => s.trim()).filter(Boolean),
+      descriptions: getDescriptionsFromContainer('aboutDescriptions'),
       keywords: getKeywordsFromContainer('aboutKeywords'),
     };
 
@@ -422,7 +474,7 @@
       headerSection,
       aboutSection,
       skillSection,
-      targetSection: { position: q('#targetPosition')?.value ?? '', keywords: getKeywordsFromContainer('targetKeywords') },
+      targetSection: { position: q('#targetPosition')?.value, keywords: getKeywordsFromContainer('targetKeywords') },
       graduationSection: { graduations },
       specializationSection: { specializations },
       projectSection: { projects },
@@ -437,15 +489,34 @@
 
   if (previewBtn) {
     previewBtn.addEventListener('click', async () => {
-      const variables = collect();
-      const resp = await fetch('/api/render', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(variables),
-      });
-      const html = await resp.text();
-      const iframe = q('#previewFrame');
-      iframe.srcdoc = html;
+      try {
+        const variables = collect();
+        console.log('Sending to preview:', variables);
+        const resp = await fetch('/api/render', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(variables),
+        });
+        if (!resp.ok) {
+          throw new Error(`Response status: ${resp.status}`);
+        }
+        const html = await resp.text();
+        console.log('Received HTML:', html.substring(0, 100));
+
+        // Open in new tab
+        const newTab = window.open('', '_blank');
+        if (newTab) {
+          newTab.document.write(html);
+          newTab.document.close();
+          console.log('Preview opened in new tab');
+        } else {
+          console.error('Could not open new tab');
+          alert('Please allow popups to view the preview');
+        }
+      } catch (err) {
+        console.error('Preview error:', err);
+        alert('Error rendering preview: ' + err.message);
+      }
     });
   }
 
