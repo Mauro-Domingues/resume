@@ -46,9 +46,9 @@
     const div = document.createElement('div');
     div.className = 'item';
     div.innerHTML = `
-      <input class="title" placeholder="Link name (e.g., Portfolio)" value="${data?.value ?? ''}" />
-      <input class="url" placeholder="Link URL" value="${data?.ref ?? ''}" />
-      <button class="remove">Remove</button>
+      <input class="title" placeholder="Nome do Site (e.g., Portfolio)" value="${data?.value ?? ''}" />
+      <input class="url" placeholder="URL do Site" value="${data?.ref ?? ''}" />
+      <button class="remove">Remover</button>
     `;
     div.querySelector('.remove').addEventListener('click', () => div.remove());
     return div;
@@ -68,17 +68,17 @@
     const div = document.createElement('div');
     div.className = 'item';
     div.innerHTML = `
-      <input class="title" placeholder="Title" value="${data?.title ?? ''}" />
+      <input class="title" placeholder="Habilidade" value="${data?.title ?? ''}" />
       <select class="level">
-        <option value="basic">basic</option>
-        <option value="basic-average">basic-average</option>
-        <option value="average">average</option>
-        <option value="average-advanced">average-advanced</option>
-        <option value="advanced">advanced</option>
-        <option value="advanced-specialized">advanced-specialized</option>
-        <option value="specialized">specialized</option>
+        <option value="basic">básico</option>
+        <option value="basic-average">iniciante</option>
+        <option value="average">intermediário</option>
+        <option value="average-advanced">proficiente</option>
+        <option value="advanced">avançado</option>
+        <option value="advanced-specialized">expert</option>
+        <option value="specialized">especializado</option>
       </select>
-      <button class="remove">Remove</button>
+      <button class="remove">Remover</button>
     `;
     if (data?.level) div.querySelector('.level').value = data.level;
     div.querySelector('.remove').addEventListener('click', () => div.remove());
@@ -89,15 +89,15 @@
     const div = document.createElement('div');
     div.className = 'item';
     div.innerHTML = `
-      <input class="title" placeholder="Title" value="${data?.title ?? ''}" />
-      <input class="company" placeholder="Company" value="${data?.company ?? ''}" />
+      <input class="title" placeholder="Cargo" value="${data?.title ?? ''}" />
+      <input class="company" placeholder="Empresa" value="${data?.company ?? ''}" />
       <input type="date" class="startsAt" value="${data?.startsAt ?? ''}" />
       <input type="date" class="endsAt" value="${data?.endsAt ?? ''}" style="display: ${data?.currently ? 'none' : 'block'}" />
-      <label>Currently <input type="checkbox" class="currently" ${data?.currently ? 'checked' : ''}/></label>
-      <textarea class="description" placeholder="Description">${data?.description ?? ''}</textarea>
+      <label>Trabalha Atualmente? <input type="checkbox" class="currently" ${data?.currently ? 'checked' : ''}/></label>
+      <textarea class="description" placeholder="Descrição">${data?.description ?? ''}</textarea>
       <div class="keywords-sub"></div>
-      <button type="button" class="keywords-add">+ Add Keyword</button>
-      <button class="remove">Remove</button>
+      <button type="button" class="keywords-add">+ Adicionar palavra-chave</button>
+      <button class="remove">Remover</button>
     `;
     const keywordsSub = div.querySelector('.keywords-sub');
     const keywordsAddBtn = div.querySelector('.keywords-add');
@@ -172,8 +172,8 @@
     });
 
     html += '<div class="keywords-sub"></div>';
-    html += '<button type="button" class="keywords-add">+ Add Keyword</button>';
-    html += '<button class="remove">Remove</button>';
+    html += '<button type="button" class="keywords-add">+ Adicionar palavra-chave</button>';
+    html += '<button class="remove">Remover</button>';
 
     div.innerHTML = html;
 
@@ -286,7 +286,7 @@
     const div = document.createElement('div');
     div.className = 'description-tag';
     div.innerHTML = `
-      <textarea class="description-input" placeholder="Description">${text}</textarea>
+      <textarea class="description-input" placeholder="Descrição">${text}</textarea>
       <button type="button" class="description-remove">×</button>
     `;
     div.querySelector('.description-remove').addEventListener('click', () => div.remove());
@@ -337,12 +337,12 @@
   if (graduationAddBtn && graduationList) {
     graduationAddBtn.addEventListener('click', () => {
       const item = createGenericRow([
-        { name: 'title', label: 'Title' },
-        { name: 'institution', label: 'Institution' },
-        { name: 'startsAt', label: 'Start', type: 'date' },
-        { name: 'endsAt', label: 'End', type: 'date' },
-        { name: 'currently', label: 'Currently', type: 'checkbox' },
-        { name: 'description', label: 'Description', type: 'textarea' },
+        { name: 'title', label: 'Título' },
+        { name: 'institution', label: 'Instituição' },
+        { name: 'startsAt', label: 'Início', type: 'date' },
+        { name: 'endsAt', label: 'Fim', type: 'date' },
+        { name: 'currently', label: 'Cursa Atualmente?', type: 'checkbox' },
+        { name: 'description', label: 'Descrição', type: 'textarea' },
       ]);
 
       // Add toggle logic for currently checkbox
@@ -363,9 +363,9 @@
   const projectsAddBtn = q('#projectsAdd');
   if (projectsAddBtn && projectsList) {
     projectsAddBtn.addEventListener('click', () => projectsList.appendChild(createGenericRow([
-      { name: 'title', label: 'Title' },
-      { name: 'description', label: 'Description', type: 'textarea' },
-      { name: 'banner', label: 'Banner Image', type: 'image' },
+      { name: 'title', label: 'Título' },
+      { name: 'description', label: 'Descrição', type: 'textarea' },
+      { name: 'banner', label: 'Imagem do Banner', type: 'image' },
       { name: 'link', label: 'Link', type: 'link' },
     ])));
   }
@@ -375,10 +375,10 @@
   const specAddBtn = q('#specializationAdd');
   if (specAddBtn && specList) {
     specAddBtn.addEventListener('click', () => specList.appendChild(createGenericRow([
-      { name: 'title', label: 'Title' },
-      { name: 'institution', label: 'Institution' },
-      { name: 'duration', label: 'Duration (hours)', type: 'number' },
-      { name: 'description', label: 'Description', type: 'textarea' },
+      { name: 'title', label: 'Título' },
+      { name: 'institution', label: 'Instituição' },
+      { name: 'duration', label: 'Duração (horas)', type: 'number' },
+      { name: 'description', label: 'Descrição', type: 'textarea' },
     ])));
   }
 
@@ -391,10 +391,10 @@
 
   function collect() {
     const templateConfig = {
-      name: q('#templateModel')?.value ?? '',
+      name: q('#templateModel')?.value,
       language: q('#templateLanguage')?.value ?? '',
       monochrome: q('#templateMonochrome')?.checked ?? false,
-      fontColor: q('#templateFontColor')?.value ?? '#000000',
+      fontColor: q('#templateFontColor')?.value ?? '#706f6f',
       fontSize: Number(q('#templateFontSize')?.value ?? 12),
     };
 
@@ -485,8 +485,8 @@
   }
 
   const previewBtn = q('#preview');
-  const downloadBtn = q('#downloadPdf');
-  const copyJsonBtn = q('#copyJson');
+  const copyJsonBtn = q('#downloadPdf');
+  const downloadBtn = q('#copyJson');
 
   if (previewBtn) {
     previewBtn.addEventListener('click', async () => {
