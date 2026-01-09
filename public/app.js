@@ -486,6 +486,7 @@
 
   const previewBtn = q('#preview');
   const downloadBtn = q('#downloadPdf');
+  const copyJsonBtn = q('#copyJson');
 
   if (previewBtn) {
     previewBtn.addEventListener('click', async () => {
@@ -540,6 +541,20 @@
       a.download = 'resume.pdf';
       a.click();
       URL.revokeObjectURL(url);
+    });
+  }
+
+  if (copyJsonBtn) {
+    copyJsonBtn.addEventListener('click', async () => {
+      try {
+        const variables = collect();
+        const jsonString = JSON.stringify(variables, null, 2);
+        await navigator.clipboard.writeText(jsonString);
+        alert('JSON copiado para a área de transferência!');
+      } catch (err) {
+        console.error('Copy JSON error:', err);
+        alert('Erro ao copiar JSON: ' + err.message);
+      }
     });
   }
 

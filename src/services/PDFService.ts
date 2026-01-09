@@ -6,16 +6,13 @@ export class PDFService {
 
   async #init(): Promise<void> {
     if (!this.#browser) {
-      /**
-       * @description If the API doesn't run local, comment out lines 18 and 22 (or install chromium on the pc).
-       */
       this.#browser = await launch({
         headless: true,
-        executablePath: executablePath(), // @coment
+        executablePath: executablePath(),
         handleSIGINT: true,
         handleSIGHUP: true,
         handleSIGTERM: true,
-        channel: 'chrome', // @coment
+        channel: 'chrome',
         defaultViewport: null,
         ignoreDefaultArgs: [
           '--disable-extensions',
