@@ -1,5 +1,5 @@
 import { IGenerateDTO } from '../dtos/IGeneratePDFDTO';
-import { Browser, launch } from 'puppeteer';
+import { Browser, launch,executablePath } from 'puppeteer';
 
 export class PDFService {
   #browser!: Browser;
@@ -11,11 +11,11 @@ export class PDFService {
        */
       this.#browser = await launch({
         headless: true,
-        // executablePath: '/snap/bin/chromium', // @coment
+        executablePath: executablePath(), // @coment
         handleSIGINT: true,
         handleSIGHUP: true,
         handleSIGTERM: true,
-        // channel: 'chrome', // @coment
+        channel: 'chrome', // @coment
         defaultViewport: null,
         ignoreDefaultArgs: [
           '--disable-extensions',
